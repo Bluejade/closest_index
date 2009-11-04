@@ -1,0 +1,26 @@
+= Array::ClosestIndex
+
+Adds a closest_index method to the Array class.
+
+= Usage
+
+Given an array of numbers in ascending order
+array.closest_index(value) returns the index of the number in the array closest to 'value'.
+
+For example:
+
+  $ irb -r ./lib/closest_index.rb 
+  > a = [1, 2, 3, 4, 5, 6, 7]
+  => [1, 2, 3, 4, 5, 6, 7]
+
+  > a.closest_index(3.5)
+  => 3
+
+  > a.closest_index(4)
+  => 3
+
+  > a.closest_index(-3)
+  => 0
+
+  > a.closest_index(30)
+  => 6
